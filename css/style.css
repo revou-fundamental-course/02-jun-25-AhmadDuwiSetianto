@@ -1,4 +1,3 @@
-/* Global Styles */
 :root {
   --primary-color: #3498db;
   --secondary-color: #2c3e50;
@@ -119,7 +118,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 2 rem;
 }
 
 .logo img {
