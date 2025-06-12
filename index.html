@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Future Academy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <img src="images/images1.png" alt="School Logo" />
+          <h1>Bright Future Academy</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Our Profile</a></li>
+            <li><a href="#message">Message Us</a></li>
+          </ul>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2 id="welcome-message">Welcome to Bright Future Academy</h2>
+          <p>Shaping young minds for a brighter tomorrow</p>
+          <a href="#profile" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="profile-section">
+      <div class="container">
+        <h2>Our Profile</h2>
+        <div class="profile-grid">
+          <div class="about-section">
+            <h3>About Our School</h3>
+            <p>
+              Founded in 1995, Bright Future Academy has been a cornerstone of
+              educational excellence in our community. We provide a nurturing
+              environment that fosters intellectual curiosity, creativity, and
+              personal growth.
+            </p>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Years of Excellence</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1,200+</span>
+                <span class="stat-label">Students</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">85+</span>
+                <span class="stat-label">Qualified Teachers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vision-mission">
+            <div class="vm-card">
+              <h3>Our Vision</h3>
+              <p>
+                To be a leading educational institution that empowers students
+                to become innovative thinkers, compassionate leaders, and
+                responsible global citizens.
+              </p>
+            </div>
+            <div class="vm-card">
+              <h3>Our Mission</h3>
+              <ul>
+                <li>
+                  Provide a holistic education that balances academic rigor with
+                  character development
+                </li>
+                <li>
+                  Foster a love for lifelong learning and critical thinking
+                </li>
+                <li>
+                  Create an inclusive environment that celebrates diversity
+                </li>
+                <li>
+                  Equip students with 21st century skills for future success
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="message" class="message-section">
+      <div class="container">
+        <h2>Message Us</h2>
+        <div class="message-container">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <!-- Tambahan Radio Button Jenis Kelamin -->
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="Laki-laki" checked />
+                  <span class="radio-custom"></span>
+                  Laki-laki
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="Perempuan" />
+                  <span class="radio-custom"></span>
+                  Perempuan
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message-text"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <div id="form-result" class="form-result">
+            <h3>Your Message Details</h3>
+            <div class="result-item">
+              <span class="result-label">Name:</span>
+              <span id="result-name" class="result-value">-</span>
+            </div>
+            <!-- Tambahan hasil jenis kelamin -->
+            <div class="result-item">
+              <span class="result-label">Gender:</span>
+              <span id="result-gender" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Email:</span>
+              <span id="result-email" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Phone:</span>
+              <span id="result-phone" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Message:</span>
+              <span id="result-message" class="result-value">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>Bright Future Academy</h3>
+            <p>123 Education Street, Knowledge City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@brightfuture.edu</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Bright Future Academy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
