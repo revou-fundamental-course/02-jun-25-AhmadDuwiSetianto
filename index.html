@@ -15,7 +15,7 @@
       <div class="container-header">
         <div class="logo">
           <img src="images/images1.png" alt="School Logo" />
-          <h1>Bright Future Academy</h1>
+          <h1>ADS Academy</h1>
         </div>
         <nav>
           <ul>
@@ -33,8 +33,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h2 id="welcome-message">Welcome to Bright Future Academy</h2>
-          <p>Shaping young minds for a brighter tomorrow</p>
+          <h2 id="welcome-message">Selamat datang di ADS Academy</h2>
+          <p>Membentuk pikiran muda untuk masa depan yang lebih cerah</p>
           <a href="#profile" class="btn">Learn More</a>
         </div>
       </div>
@@ -42,56 +42,59 @@
 
     <section id="profile" class="profile-section">
       <div class="container">
-        <h2>Our Profile</h2>
+        <h2>Profil Kami</h2>
         <div class="profile-grid">
           <div class="about-section">
-            <h3>About Our School</h3>
+            <h3>Tentang kami</h3>
             <p>
-              Founded in 1995, Bright Future Academy has been a cornerstone of
-              educational excellence in our community. We provide a nurturing
-              environment that fosters intellectual curiosity, creativity, and
-              personal growth.
+                Academy ini didirikan pada tahun 1995, 
+                ADS Academy telah menjadi pilar keunggulan pendidikan di komunitas kami.
+                Kami menyediakan lingkungan yang mendukung yang mendorong rasa ingin tahu intelektual, 
+                kreativitas, dan pertumbuhan pribadi.
             </p>
             <div class="stats">
               <div class="stat-item">
-                <span class="stat-number">25+</span>
-                <span class="stat-label">Years of Excellence</span>
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Tahun pengalaman di bidangnya</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">1,200+</span>
-                <span class="stat-label">Students</span>
+                <span class="stat-label">Peserta</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">85+</span>
-                <span class="stat-label">Qualified Teachers</span>
+                <span class="stat-label">Mentor Berkualifikasi</span>
               </div>
             </div>
           </div>
 
           <div class="vision-mission">
             <div class="vm-card">
-              <h3>Our Vision</h3>
+              <h3>Visi Kami</h3>
               <p>
-                To be a leading educational institution that empowers students
-                to become innovative thinkers, compassionate leaders, and
-                responsible global citizens.
+                Menjadi lembaga pendidikan terkemuka yang memberdayakan siswa
+                untuk menjadi pemikir inovatif, pemimpin yang penuh kasih,
+                dan warga global yang bertanggung jawab.
               </p>
             </div>
             <div class="vm-card">
-              <h3>Our Mission</h3>
+              <h3>Misi Kami</h3>
               <ul>
                 <li>
-                  Provide a holistic education that balances academic rigor with
-                  character development
+                 Menyediakan kurikulum pelatihan berbasis proyek nyata 
+                 untuk mencetak developer, engineer, dan ahli IT siap industri.
                 </li>
                 <li>
-                  Foster a love for lifelong learning and critical thinking
+                  Mengembangkan solusi perangkat lunak yang revolusioner
+                  dengan mengintegrasikan teknologi terkini (AI, IoT, Cloud, dll.).
                 </li>
                 <li>
-                  Create an inclusive environment that celebrates diversity
+                 Bermitra dengan perusahaan, startup, dan komunitas untuk
+                 menciptakan lapangan kerja dan proyek berdampak.
                 </li>
                 <li>
-                  Equip students with 21st century skills for future success
+                  Membuka kesempatan belajar bagi semua kalangan melalui
+                  program beasiswa, webinar, dan konten edukasi terbuka.
                 </li>
               </ul>
             </div>
@@ -106,11 +109,15 @@
         <div class="message-container">
           <form id="contact-form">
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">Nama</label>
               <input type="text" id="name" name="name" required />
             </div>
 
-            <!-- Tambahan Radio Button Jenis Kelamin -->
+            <div class="form-group">
+              <label for="birthdate">Tanggal Lahir</label>
+              <input type="date" id="birthdate" name="birthdate" required />
+            </div>
+
             <div class="form-group">
               <label>Gender</label>
               <div class="radio-group">
@@ -132,11 +139,11 @@
               <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number</label>
+              <label for="phone">Nomor Telpon</label>
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="message">Pesan</label>
               <textarea
                 id="message-text"
                 name="message"
@@ -150,10 +157,15 @@
           <div id="form-result" class="form-result">
             <h3>Your Message Details</h3>
             <div class="result-item">
-              <span class="result-label">Name:</span>
+              <span class="result-label">Nama:</span>
               <span id="result-name" class="result-value">-</span>
             </div>
-            <!-- Tambahan hasil jenis kelamin -->
+
+            <div class="result-item">
+              <span class="result-label">Tanggal Lahir:</span>
+              <span id="result-birthdate" class="result-value">-</span>
+            </div>
+
             <div class="result-item">
               <span class="result-label">Gender:</span>
               <span id="result-gender" class="result-value">-</span>
@@ -163,11 +175,11 @@
               <span id="result-email" class="result-value">-</span>
             </div>
             <div class="result-item">
-              <span class="result-label">Phone:</span>
+              <span class="result-label">Nomor Telpon:</span>
               <span id="result-phone" class="result-value">-</span>
             </div>
             <div class="result-item">
-              <span class="result-label">Message:</span>
+              <span class="result-label">Pesan:</span>
               <span id="result-message" class="result-value">-</span>
             </div>
           </div>
@@ -179,10 +191,10 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
-            <h3>Bright Future Academy</h3>
-            <p>123 Education Street, Knowledge City</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: info@brightfuture.edu</p>
+            <h3>ADS Academy</h3>
+            <p>Pekalongan, Indonesia</p>
+            <p>Phone: (+62)85640636177</p>
+            <p>Email: info@ads_academy.comom</p>
           </div>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -192,7 +204,7 @@
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2023 Bright Future Academy. All rights reserved.</p>
+          <p>&copy; 2025 ADS Academy. All rights reserved.</p>
         </div>
       </div>
     </footer>

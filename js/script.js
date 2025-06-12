@@ -51,15 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (welcomeMessage) {
       if (storedName) {
-        welcomeMessage.textContent = `Hi ${storedName}, welcome to Bright Future Academy`;
+        welcomeMessage.textContent = `Hi ${storedName}, Selamat datang di ADS Academy`;
       } else {
         setTimeout(() => {
           const name = prompt("Please enter your name:");
           if (name) {
             localStorage.setItem("visitorName", name);
-            welcomeMessage.textContent = `Hi ${name}, welcome to Bright Future Academy`;
+            welcomeMessage.textContent = `Hi ${name}, Selamat datang di ADS Academy`;
           } else {
-            welcomeMessage.textContent = "Welcome to Bright Future Academy";
+            welcomeMessage.textContent = "Selamat datang di ADS Academy";
           }
         }, 1000);
       }
@@ -72,6 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
   const formResult = document.getElementById("form-result");
 
+  // Remove checked attribute from radio buttons to prevent auto-selection
+  document.querySelectorAll('input[name="gender"]').forEach((radio) => {
+    radio.removeAttribute("checked");
+  });
+
   if (contactForm && formResult) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -81,10 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
         name: document.getElementById("name").value.trim(),
         email: document.getElementById("email").value.trim(),
         phone: document.getElementById("phone").value.trim(),
+        birthdate: document.getElementById("birthdate").value,
         message: document.getElementById("message-text").value.trim(),
         gender:
           document.querySelector('input[name="gender"]:checked')?.value ||
           "Not specified",
+        submitTime: new Date().toLocaleString(),
       };
 
       // Validation
@@ -152,8 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("result-name").textContent = formData.name;
     document.getElementById("result-email").textContent = formData.email;
     document.getElementById("result-phone").textContent = formData.phone;
-    document.getElementById("result-message").textContent = formData.message;
+    document.getElementById("result-birthdate").textContent =
+      formData.birthdate || "-";
     document.getElementById("result-gender").textContent = formData.gender;
+    document.getElementById("result-message").textContent = formData.message;
+    document.getElementById("result-submit-time").textContent =
+      formData.submitTime;
 
     // Show result section with animation
     formResult.style.display = "block";
@@ -165,12 +176,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset form
     contactForm.reset();
 
+    // Clear radio selection after form submission
+    document.querySelectorAll('input[name="gender"]').forEach((radio) => {
+      radio.checked = false;
+    });
+
     // Store name in localStorage
     localStorage.setItem("visitorName", formData.name);
 
     // Update welcome message
     if (welcomeMessage) {
-      welcomeMessage.textContent = `Hi ${formData.name}, welcome to Bright Future Academy`;
+      welcomeMessage.textContent = `Hi ${formData.name}, Selamat datang di ADS Academy`;
     }
 
     showAlert("Your message has been submitted successfully!", "success");
@@ -234,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           if (submitButton.disabled) {
             submitButton.disabled = false;
-            submitButton.textContent = "Send Message";
+            submitButton.textContent = "Submit";
           }
         }, 5000);
       }
